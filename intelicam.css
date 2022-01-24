@@ -461,3 +461,14 @@ p {
   text-align: center;
   color: var(--text-color-light);
 }
+
+
+@media (max-height: 700px) {
+  #wrapper {
+    height: 741vh;
+  }
+
+  .section-finale img {
+    height: 15.8rem;
+  }
+}
