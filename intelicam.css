@@ -76,7 +76,7 @@ h3.logo-text {
 }
 
 #header nav {
-  margin-top: 1rem;
+  margin-top: 3rem;
 
   font: normal 500 14px 'jost', sans-serif;
 }
@@ -92,13 +92,19 @@ h3.logo-text {
   color: var(--text-color);
 }
 
+#header .toggle {
+  visibility: hidden;
+  opacity: 0;
+}
+
 #header .buttons-header {
   margin-top: 1rem;
 
   display: flex;
 
-  float: left;
-  margin-left: auto;
+  float: right;
+  margin-left: 70%;
+  position: absolute;
 }
 
 a.buttons {
@@ -462,6 +468,33 @@ p {
   color: var(--text-color-light);
 }
 
+/* Back to top */
+.back-to-top {
+  background: var(--hover-color);
+  color: var(--text-color-light);
+
+  position: fixed;
+  right: 1rem;
+  bottom: 3rem;
+
+  padding: 0.5rem;
+  clip-path: circle();
+
+  font-size: 1.5rem;
+  line-height: 0;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: 0.3s;
+  transform: translateY(100%);
+}
+
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
 
 @media (max-height: 700px) {
   #wrapper {
@@ -470,5 +503,325 @@ p {
 
   .section-finale img {
     height: 15.8rem;
+  }
+}
+
+@media (max-width: 450px) {
+  body {
+    max-width: 500px;
+    width: 450px;
+  }
+
+  #header .buttons-header {
+    position: absolute;
+    top: 4rem;
+    margin-left: 0;
+  }
+
+  #header .buttons-header a {
+    margin-left: 0;
+    margin-right: 1rem;
+  }
+
+  #front h1 {
+    font-size: 20px;
+    width: auto;
+
+    margin-top: 60px;
+    margin-bottom: 0;
+  }
+
+  #front a.button-front {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  h4.h4-main {
+    width: 70% !important;
+    margin: 1rem 2rem !important;
+  }
+
+  h4 {
+    font-size: 10px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  #wrapper {
+    margin-top: 0;
+    height: 889vh;
+  }
+
+  #wrapper .section {
+    max-width: 420px;
+    margin-left: 2.5rem;
+  }
+
+  #wrapper .section .barra {
+    width: 75%;
+    margin-top: 3rem;
+  }
+  #wrapper .section .cards {
+    grid-template-columns: none;
+  }
+  #wrapper .section .cards .grid {
+    margin-bottom: 0.5rem;
+  }
+
+  #wrapper .section-1 {
+    top: 30rem;
+  }
+
+  #wrapper .loose {
+    padding-top: 90rem;
+    flex-direction: column;
+  }
+
+  #wrapper .loose p {
+    width: 90%;
+    margin: 0 auto 3rem;
+  }
+
+  #wrapper .loose .grid-numbers h1 {
+    font-size: 40px;
+  }
+  #wrapper .loose .grid-numbers h4 {
+    font-size: 20px;
+  }
+
+  #wrapper .section-2 {
+    top: 130rem;
+  }
+
+  #wrapper .section-3 {
+    top: 208rem;
+  }
+
+  #wrapper .section-4 {
+    top: 268rem;
+  }
+
+  #wrapper .section-5 {
+    top: 333rem;
+
+    padding-left: 0;
+    width: 90%;
+  }
+  #wrapper .section-5 .image-stars {
+    top: -2rem;
+    left: 50%;
+    width: 12rem;
+  }
+  #wrapper .section-5 h2 {
+    margin: 2rem 0 2rem 1rem;
+  }
+
+  #wrapper .section-5 h3 {
+    width: 50%;
+    margin-left: 1rem;
+  }
+
+  #wrapper .section-5 p {
+    width: 90%;
+    margin-left: 1rem;
+  }
+
+  #wrapper .section-5 a {
+    margin-left: 1rem;
+  }
+
+  #wrapper .section-6 {
+    top: 360rem;
+
+    display: initial;
+  }
+  #wrapper .section-6 a {
+    margin-left: 0;
+  }
+  #wrapper .section-6 .image-script {
+    width: 20rem;
+
+    top: 1rem;
+  }
+
+  #wrapper .section-7 {
+    top: 406rem;
+  }
+  #wrapper .section-7 .cards .grid {
+    margin-bottom: 1rem;
+  }
+
+  #wrapper .section-7 .cards .grid h2 {
+    margin: 0.25rem 0 0;
+  }
+
+  #wrapper .section-finale {
+    top: 475rem;
+    width: 450px;
+  }
+
+  #wrapper .section-finale img {
+    height: 14rem;
+  }
+
+  #wrapper .section-finale p {
+    width: 70%;
+  }
+  #wrapper .section-finale a {
+    margin-left: 0;
+  }
+
+  #footer {
+    flex-direction: column;
+  }
+
+  #footer .info {
+    width: 90%;
+  }
+
+  #footer .info p {
+    font-size: 10px;
+  }
+
+  #footer .lists {
+    margin-left: 0;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #footer .lists .grid {
+    margin-bottom: 1.5rem;
+  }
+  #footer .lists ul {
+    padding-right: 0;
+  }
+
+  #header nav {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    margin-top: 0;
+  }
+
+  nav ul li {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  nav ul li a {
+    transition: color 0.2s;
+    position: relative;
+
+    font-size: 40px;
+  }
+
+  nav ul li a:hover,
+  nav ul li a.active {
+    color: var(--background-section-color);
+  }
+
+  nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--background-section-color);
+
+    position: absolute;
+    left: 0;
+    bottom: -1.5rem;
+
+    transition: width 0.2s;
+  }
+
+  #header nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--background-section-color);
+
+    position: absolute;
+    left: 0;
+    bottom: -1.5rem;
+
+    transition: width 0.2s;
+  }
+
+  #header nav ul li a:hover::after,
+  #header nav ul li a.active::after {
+    width: 100%;
+  }
+
+  nav .menu {
+    opacity: 0;
+    visibility: hidden;
+    top: -20rem;
+    transition: 0.2s;
+    width: 1;
+  }
+
+  nav .menu ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Mostrar menu */
+  nav.show .menu {
+    opacity: 1;
+    visibility: visible;
+
+    background: var(--background-section-color);
+
+    height: 110%;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+
+    display: grid;
+    place-content: center;
+  }
+
+  nav.show .menu ul {
+    display: grid;
+  }
+
+  nav.show ul.grid {
+    gap: 4rem;
+  }
+
+  /* toggle menu */
+  .toggle {
+    color: var(--hover-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  nav .icon-close {
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+    top: -1.5rem;
+    right: 1.5rem;
+    z-index: 50;
+
+    transition: 0.2s;
+  }
+
+  nav.show div.icon-close {
+    visibility: visible;
+    opacity: 1;
+    top: 1.5rem;
+    right: 3rem;
+    position: fixed;
   }
 }
